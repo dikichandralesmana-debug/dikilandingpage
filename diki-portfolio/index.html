@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Diki Candra Lesmana — Video Editor & Videographer Portfolio</title>
+  <meta name="description" content="Portofolio resmi Diki Candra Lesmana, Video Editor & Videographer berpengalaman dalam produksi konten media sosial, podcast, TVC, dan color grading." />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Antonio:wght@600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Subtle ambient grain & glow -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Photo Upload Input (Hidden, triggered via floating button for easy customization) -->
+  <input type="file" id="photoUploadInput" accept="image/*" hidden />
+
+  <div class="page-wrapper">
+    <!-- ==================== TOP BAR ==================== -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <span class="role-accent">VIDEO EDITOR</span>
+        <span class="role-sub">VIDEOGRAPHER &amp; CREATOR</span>
+      </div>
+
+      <nav class="topbar-nav" aria-label="Main Navigation">
+        <a href="#about">Profil</a>
+        <a href="#projects">Karya</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+
+      <div class="topbar-right">
+        <a href="#contact" class="availability-pill">
+          <span class="avail-text">AVAILABLE FOR FREELANCE</span>
+          <span class="sparkle-icon" aria-hidden="true">✦</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" id="about">
+      <!-- Giant Background Word -->
+      <div class="hero-bg-typography" aria-hidden="true">
+        <span>PORTFOLIO</span>
+      </div>
+
+      <div class="hero-grid">
+        <!-- Left Column: Intro & Bio -->
+        <div class="hero-left">
+          <p class="hero-script">Hello, I'm</p>
+          <h1 class="hero-name">
+            DIKI CANDRA<br />
+            LESMANA
+          </h1>
+          <h2 class="hero-title">
+            VIDEO EDITOR &amp;<br />
+            VIDEOGRAPHER
+          </h2>
+          <div class="hero-location-badge">
+            <svg class="icon-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span>JAKARTA, INDONESIA</span>
+          </div>
+        </div>
+
+        <!-- Center Column: Portrait Image -->
+        <div class="hero-center">
+          <div class="portrait-container">
+            <img
+              src="assets/diki-portrait-transparent.png"
+              alt="Diki Candra Lesmana - Video Editor & Videographer"
+              id="heroPortraitImg"
+              class="hero-portrait"
+            />
+            <div class="photo-switcher-group">
+              <button type="button" class="photo-mode-btn active" data-src="assets/diki-portrait-transparent.png" title="Tampilkan versi Cutout Transparan">
+                Versi Studio
+              </button>
+              <button type="button" class="photo-mode-btn" data-src="assets/diki-original.jpg" title="Tampilkan foto asli (Jembatan MRT)">
+                Foto Asli
+              </button>
+              <button type="button" class="change-photo-btn" id="changePhotoBtn" title="Upload foto lain dari perangkat Anda">
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                  <circle cx="12" cy="13" r="4"/>
+                </svg>
+                <span>Upload</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Floating Tagline & Stats -->
+        <div class="hero-right">
+          <div class="floating-tagline">
+            <div class="sparkle-circle" aria-hidden="true">
+              <span>✦</span>
+            </div>
+            <p>
+              Turning raw footage<br />
+              into powerful<br />
+              visual stories.
+            </p>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-target="4">4+</span>
+              <span class="stat-label">YEARS<br />EXPERIENCE</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="150">150+</span>
+              <span class="stat-label">VIDEOS &amp; REELS<br />PRODUCED</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="7">7+</span>
+              <span class="stat-label">PRO TOOLS<br />MASTERED</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SELECTED PROJECTS & EXPERIENCE ==================== -->
+    <section class="projects-section" id="projects">
+      <div class="section-header">
+        <h2 class="section-title">SELECTED PROJECTS &amp; PRODUCTIONS</h2>
+        <div class="header-line"></div>
+        <div class="filter-tabs" role="tablist" aria-label="Filter kategori proyek">
+          <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">ALL WORKS</button>
+          <button class="filter-tab" data-filter="longform" role="tab" aria-selected="false">LONGFORM</button>
+          <button class="filter-tab" data-filter="shortform" role="tab" aria-selected="false">SHORTFORM</button>
+        </div>
+        <a href="#contact" class="view-all-link">
+          <span>HUBUNGI SAYA</span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <div class="projects-grid">
+        <!-- ==================== LONGFORM (3 KARTU MINIMALIS) ==================== -->
+        <!-- Longform 01 -->
+        <article
+          class="project-card"
+          data-category="longform"
+          data-project-id="longform_1"
+          data-youtube-url="https://www.youtube.com/watch?v=Bgdf9sMLOCQ"
+        >
+          <div class="project-preview">
+            <div class="project-img-wrap">
+              <img src="assets/project-podcast.png" alt="Longform Video 01" class="project-thumb-img" />
+              <div class="video-embed-slot" aria-label="YouTube Video Player"></div>
+              <div class="project-overlay">
+                <button type="button" class="card-edit-yt-btn" title="Ganti link video YouTube">
+                  ✎ Link YT
+                </button>
+                <button type="button" class="yt-play-badge" aria-label="Putar video YouTube">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Longform 02 -->
+        <article
+          class="project-card"
+          data-category="longform"
+          data-project-id="longform_2"
+          data-youtube-url="https://www.youtube.com/watch?v=Bgdf9sMLOCQ"
+        >
+          <div class="project-preview">
+            <div class="project-img-wrap">
+              <img src="assets/project-tvc.png" alt="Longform Video 02" class="project-thumb-img" />
+              <div class="video-embed-slot" aria-label="YouTube Video Player"></div>
+              <div class="project-overlay">
+                <button type="button" class="card-edit-yt-btn" title="Ganti link video YouTube">
+                  ✎ Link YT
+                </button>
+                <button type="button" class="yt-play-badge" aria-label="Putar video YouTube">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Longform 03 -->
+        <article
+          class="project-card"
+          data-category="longform"
+          data-project-id="longform_3"
+          data-youtube-url="https://www.youtube.com/watch?v=Bgdf9sMLOCQ"
+        >
+          <div class="project-preview">
+            <div class="project-img-wrap">
+              <img src="assets/project-twowheels.png" alt="Longform Video 03" class="project-thumb-img" />
+              <div class="video-embed-slot" aria-label="YouTube Video Player"></div>
+              <div class="project-overlay">
+                <button type="button" class="card-edit-yt-btn" title="Ganti link video YouTube">
+                  ✎ Link YT
+                </button>
+                <button type="button" class="yt-play-badge" aria-label="Putar video YouTube">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Longform 04 -->
+        <article
+          class="project-card"
+          data-category="longform"
+          data-project-id="longform_4"
+          data-youtube-url="https://www.youtube.com/watch?v=Bgdf9sMLOCQ"
+        >
+          <div class="project-preview">
+            <div class="project-img-wrap">
+              <img src="assets/project-podcast.png" alt="Longform Video 04" class="project-thumb-img" />
+              <div class="video-embed-slot" aria-label="YouTube Video Player"></div>
+              <div class="project-overlay">
+                <button type="button" class="card-edit-yt-btn" title="Ganti link video YouTube">
+                  ✎ Link YT
+                </button>
+                <button type="button" class="yt-play-badge" aria-label="Putar video YouTube">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Longform 05 -->
+        <article
+          class="project-card"
+          data-category="longform"
+          data-project-id="longform_5"
+          data-youtube-url="https://www.youtube.com/watch?v=Bgdf9sMLOCQ"
+        >
+          <div class="project-preview">
+            <div class="project-img-wrap">
+              <img src="assets/project-tvc.png" alt="Longform Video 05" class="project-thumb-img" />
+              <div class="video-embed-slot" aria-label="YouTube Video Player"></div>
+              <div class="project-overlay">
+                <button type="button" class="card-edit-yt-btn" title="Ganti link video YouTube">
+                  ✎ Link YT
+                </button>
+                <button type="button" class="yt-play-badge" aria-label="Putar video YouTube">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Longform 06 -->
+        <article
+          class="project-card"
+          data-category="longform"
+          data-project-id="longform_6"
+          data-youtube-url="https://www.youtube.com/watch?v=Bgdf9sMLOCQ"
+        >
+          <div class="project-preview">
+            <div class="project-img-wrap">
+              <img src="assets/project-twowheels.png" alt="Longform Video 06" class="project-thumb-img" />
+              <div class="video-embed-slot" aria-label="YouTube Video Player"></div>
+              <div class="project-overlay">
+                <button type="button" class="card-edit-yt-btn" title="Ganti link video YouTube">
+                  ✎ Link YT
+                </button>
+                <button type="button" class="yt-play-badge" aria-label="Putar video YouTube">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==================== SHORTFORM (3 KARTU MINIMALIS) ==================== -->
+        <!-- Shortform 01 -->
+        <article
+          class="project-card"
+          data-category="shortform"
+          data-project-id="shortform_1"
+          data-youtube-url="https://www.youtube.com/watch?v=Bgdf9sMLOCQ"
+        >
+          <div class="project-preview">
+            <div class="project-img-wrap">
+              <img src="assets/project-tvc.png" alt="Shortform Video 01" class="project-thumb-img" />
+              <div class="video-embed-slot" aria-label="YouTube Video Player"></div>
+              <div class="project-overlay">
+                <button type="button" class="card-edit-yt-btn" title="Ganti link video YouTube">
+                  ✎ Link YT
+                </button>
+                <button type="button" class="yt-play-badge" aria-label="Putar video YouTube">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Shortform 02 -->
+        <article
+          class="project-card"
+          data-category="shortform"
+          data-project-id="shortform_2"
+          data-youtube-url="https://www.youtube.com/watch?v=Bgdf9sMLOCQ"
+        >
+          <div class="project-preview">
+            <div class="project-img-wrap">
+              <img src="assets/project-podcast.png" alt="Shortform Video 02" class="project-thumb-img" />
+              <div class="video-embed-slot" aria-label="YouTube Video Player"></div>
+              <div class="project-overlay">
+                <button type="button" class="card-edit-yt-btn" title="Ganti link video YouTube">
+                  ✎ Link YT
+                </button>
+                <button type="button" class="yt-play-badge" aria-label="Putar video YouTube">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Shortform 03 -->
+        <article
+          class="project-card"
+          data-category="shortform"
+          data-project-id="shortform_3"
+          data-youtube-url="https://www.youtube.com/watch?v=Bgdf9sMLOCQ"
+        >
+          <div class="project-preview">
+            <div class="project-img-wrap">
+              <img src="assets/project-twowheels.png" alt="Shortform Video 03" class="project-thumb-img" />
+              <div class="video-embed-slot" aria-label="YouTube Video Player"></div>
+              <div class="project-overlay">
+                <button type="button" class="card-edit-yt-btn" title="Ganti link video YouTube">
+                  ✎ Link YT
+                </button>
+                <button type="button" class="yt-play-badge" aria-label="Putar video YouTube">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER / CONTACT SECTION ==================== -->
+    <footer class="contact-footer" id="contact">
+      <!-- Left: Call to action -->
+      <div class="footer-left">
+        <h2 class="footer-heading">
+          LET'S WORK <span class="red-star" aria-hidden="true">✦</span><br />
+          TOGETHER
+        </h2>
+        <a href="https://wa.me/6285155339730?text=Halo%20Diki,%20saya%20tertarik%20untuk%20berkolaborasi%20dalam%20proyek%20video." target="_blank" rel="noopener noreferrer" class="avail-footer-btn">
+          <span class="circle-arrow">→</span>
+          <span class="avail-btn-text">AVAILABLE FOR FREELANCE</span>
+        </a>
+      </div>
+
+      <!-- Center: Contact list -->
+      <div class="footer-center">
+        <a href="mailto:dikicandralesmana11@gmail.com" class="contact-row">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </span>
+          <span class="contact-val">dikicandralesmana11@gmail.com</span>
+        </a>
+
+        <a href="https://wa.me/6285155339730" target="_blank" rel="noopener noreferrer" class="contact-row">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </span>
+          <span class="contact-val">+62 851-5533-9730</span>
+        </a>
+
+        <div class="contact-row">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </span>
+          <span class="contact-val">Jakarta, Indonesia</span>
+        </div>
+      </div>
+
+      <!-- Right: Mockup Visual -->
+      <div class="footer-right">
+        <div class="mockup-container">
+          <img src="assets/footer-mockup.png" alt="Diki Candra Lesmana Video Editing Suite Mockup" class="footer-mockup-img" />
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ==================== PROJECT MODAL ==================== -->
+  <div class="modal-backdrop" id="projectModal" aria-hidden="true">
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Tutup detail proyek">✕</button>
+      <div class="modal-content" id="modalBody">
+        <!-- Populated dynamically via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- GSAP, ScrollTrigger, Flip & Lenis Smooth Scroll CDNs -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
